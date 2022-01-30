@@ -1,0 +1,36 @@
+device: cuda
+env:
+  action_size: 10
+  block_random: false
+  mov_dist: 0.02
+  num_blocks: 1
+  obj: smallcube
+  random_spawn: true
+  task: pick
+eval:
+  eval_freq: 5
+  num_test_ep: 1
+  only_test: 0
+experiment:
+  batch_size: 128
+  num_epochs: 1
+  tag: puresulfur_test
+  task_num_list:
+  - 0
+  - 1
+  - 2
+network:
+  batch_size: 128
+  betas:
+  - 0.98
+  - 0.999
+  lambda: 0.4
+  lr: 0.0001
+  momentum: 0
+  num_epochs: 1
+  optim: Adam
+  weight_decay: 0.05
+seed: 11
+view:
+  render: 0
+  save_view: false
